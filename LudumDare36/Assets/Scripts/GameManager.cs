@@ -6,8 +6,11 @@ using System.Collections;
 // TODO : the player gear can go in and out of the main gear
 // TODO : ambient camera color
 // TODO : particles on death
-// TODO : find music theme
+// TODO : find music theme + inverse pitch with velocity
 // TODO : add power ups
+using UnityEngine.UI;
+
+
 public class GameManager : MonoBehaviour {
 
 	[Header("Game Parameters")]
@@ -15,10 +18,16 @@ public class GameManager : MonoBehaviour {
 	public float velocityMax;
 	public float velocityStep;
 	private float _velocity = 0;
+	private float _direction = 1;
+
+	[Header("Canvas")]
+	[SerializeField] private GameObject canvasGame;
+	[SerializeField] private Text textScore;
 
 	public enum GameState {MENU, PLAY, PAUSE};
 
 	private GameState _gameState = GameState.MENU;
+	private float score = 0;
 
 	public GameState gameState
 	{
@@ -28,6 +37,10 @@ public class GameManager : MonoBehaviour {
 	public float velocity
 	{
 		get { return _velocity; }
+	}
+	public float direction
+	{
+		get { return _direction; }
 	}
 
 	// Use this for initialization
@@ -42,6 +55,9 @@ public class GameManager : MonoBehaviour {
 		{
 		case GameState.PLAY:
 			_velocity = Mathf.Clamp (_velocity + velocityStep, velocityMin, velocityMax);
+			score += _velocity * Time.deltaTime;
+			textScore.text = ((int)score).ToString ();
+			Debug.Log (velocity);
 			break;
 		}
 	}
@@ -56,11 +72,14 @@ public class GameManager : MonoBehaviour {
 	{
 		_gameState = GameState.PLAY;
 		_velocity = velocityMin;
+		canvasGame.SetActive (true);
+		score = 0;
 	}
 
 	public void GoToMenu()
 	{
 		_gameState = GameState.MENU;
 		_velocity = 0;
+		canvasGame.SetActive (false);
 	}
 }

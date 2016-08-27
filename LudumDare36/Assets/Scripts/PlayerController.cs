@@ -46,6 +46,6 @@ public class PlayerController : MonoBehaviour {
 	void UpdatePosition()
 	{
 		transform.position = Vector3.SmoothDamp (transform.position, position == Position.UP ? topPos.position : downPos.position, ref vecRef, 0.05f);
-		transform.Rotate (new Vector3 (0, 0, gm.velocity * (position == Position.UP ? 1 : -1)));
+		transform.Rotate (new Vector3 (0, 0, gm.velocity * gm.direction * (position == Position.UP ? 1.5f : -1.5f)));
 	}
 }
