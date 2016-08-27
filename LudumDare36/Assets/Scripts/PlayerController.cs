@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 	[Header("Boundaries")]
 	public Transform topPos;
 	public Transform downPos;
+	public GameObject deathEffect;
 
 	private GameManager gm;
 
@@ -47,5 +48,20 @@ public class PlayerController : MonoBehaviour {
 	{
 		transform.position = Vector3.SmoothDamp (transform.position, position == Position.UP ? topPos.position : downPos.position, ref vecRef, 0.05f);
 		transform.Rotate (new Vector3 (0, 0, gm.velocity * gm.direction * (position == Position.UP ? 1.5f : -1.5f)));
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		if (col.tag == "Obstacle")
+		{
+			Die ();
+		}
+	}
+
+	void Die()
+	{
+		Instantiate (deathEffect, transform.position, Quaternion.Euler(0, 180, 0));
+		gm.GameOver ();
+		Destroy (gameObject);
 	}
 }

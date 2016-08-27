@@ -2,12 +2,9 @@
 using System.Collections;
 
 // TODO : anim canvas when hitting play / going back to the menu
-// TODO : draw obstacles for the gears
-// TODO : the player gear can go in and out of the main gear
-// TODO : ambient camera color
-// TODO : particles on death
 // TODO : find music theme + inverse pitch with velocity
 // TODO : add power ups
+// TODO : instantiate player instead of current system
 using UnityEngine.UI;
 
 
@@ -22,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	[Header("Canvas")]
 	[SerializeField] private GameObject canvasGame;
+	[SerializeField] private GameObject canvasGameOver;
 	[SerializeField] private Text textScore;
 
 	public enum GameState {MENU, PLAY, PAUSE};
@@ -46,6 +44,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		canvasGame.SetActive (false);
+		canvasGameOver.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
 			_velocity = Mathf.Clamp (_velocity + velocityStep, velocityMin, velocityMax);
 			score += _velocity * Time.deltaTime;
 			textScore.text = ((int)score).ToString ();
-			Debug.Log (velocity);
+			/*Debug.Log (velocity);*/
 			break;
 		}
 	}
@@ -81,5 +81,12 @@ public class GameManager : MonoBehaviour {
 		_gameState = GameState.MENU;
 		_velocity = 0;
 		canvasGame.SetActive (false);
+		canvasGameOver.SetActive (false);
+	}
+
+	public void GameOver()
+	{
+		_gameState = GameState.PAUSE;
+		canvasGameOver.SetActive (true);
 	}
 }
