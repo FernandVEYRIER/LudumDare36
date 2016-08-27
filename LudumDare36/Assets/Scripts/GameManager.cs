@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// TODO : anim canvas when hitting play / going back to the menu
 // TODO : find music theme + inverse pitch with velocity
 // TODO : add power ups
-// TODO : instantiate player instead of current system
+// TODO : high score
+// TODO : change camera anim callbacks
+// TODO : artifact algo
 using UnityEngine.UI;
 
 
 public class GameManager : MonoBehaviour {
 
 	[Header("Game Parameters")]
+	[SerializeField] private GameObject playerPrefab;
+	[SerializeField] private Transform playerSpawnPoint;
+	[SerializeField] private GearController gearController;
 	public float velocityMin;
 	public float velocityMax;
 	public float velocityStep;
@@ -73,7 +77,9 @@ public class GameManager : MonoBehaviour {
 		_gameState = GameState.PLAY;
 		_velocity = velocityMin;
 		canvasGame.SetActive (true);
+		canvasGameOver.SetActive (false);
 		score = 0;
+		Instantiate (playerPrefab, playerSpawnPoint.position, Quaternion.identity);
 	}
 
 	public void GoToMenu()
@@ -88,5 +94,10 @@ public class GameManager : MonoBehaviour {
 	{
 		_gameState = GameState.PAUSE;
 		canvasGameOver.SetActive (true);
+	}
+
+	void OnTriggerEnter2D(Collider2D col)
+	{
+		gearController.GenerateArtifacts (col.gameObject);
 	}
 }

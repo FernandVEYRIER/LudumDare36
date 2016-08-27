@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour {
 	void Start ()
 	{
 		gm = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameManager> ();
+		topPos = GameObject.Find ("TopPos").transform;
+		downPos = GameObject.Find ("DownPos").transform;
 	}
 	
 	// Update is called once per frame
