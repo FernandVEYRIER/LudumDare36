@@ -1,10 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CameraManager : StateMachineBehaviour {
+public class CameraManager : MonoBehaviour {
 
-	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+	private GameManager gm;
+
+	void Awake()
 	{
-		GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameManager> ().StartGame ();
+		gm = GameObject.FindGameObjectWithTag ("GameController").GetComponent<GameManager> ();
+	}
+
+	// Called at the end of the play anim
+	public void BeginPlay()
+	{
+		gm.StartGame ();
+	}
+
+
+	// Called at the end of the menu anim
+	public void BeginMenu()
+	{
+		gm.ResetGear ();
 	}
 }

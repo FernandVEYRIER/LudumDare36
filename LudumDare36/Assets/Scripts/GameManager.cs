@@ -3,9 +3,6 @@ using System.Collections;
 
 // TODO : find music theme + inverse pitch with velocity
 // TODO : add power ups
-// TODO : high score
-// TODO : change camera anim callbacks
-// TODO : artifact algo
 using UnityEngine.UI;
 
 
@@ -25,11 +22,13 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private GameObject canvasGame;
 	[SerializeField] private GameObject canvasGameOver;
 	[SerializeField] private Text textScore;
+	[SerializeField] private Text textBestScore;
 
 	public enum GameState {MENU, PLAY, PAUSE};
 
 	private GameState _gameState = GameState.MENU;
 	private float score = 0;
+	private DataManager dm;
 
 	public GameState gameState
 	{
@@ -48,8 +47,10 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
+		dm = GetComponent<DataManager> ();
 		canvasGame.SetActive (false);
 		canvasGameOver.SetActive (false);
+		textBestScore.text = "Best : " + dm.BestScore;
 	}
 	
 	// Update is called once per frame
@@ -90,10 +91,17 @@ public class GameManager : MonoBehaviour {
 		canvasGameOver.SetActive (false);
 	}
 
+	public void ResetGear()
+	{
+		gearController.Reset ();
+	}
+
 	public void GameOver()
 	{
 		_gameState = GameState.PAUSE;
 		canvasGameOver.SetActive (true);
+		dm.SaveData ((int)score);
+		textBestScore.text = "Best : " + dm.BestScore;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)

@@ -65,23 +65,24 @@ public class GearController : MonoBehaviour {
 		{
 			UpdatePosition ();
 		}
-		else
+	}
+
+	public void Reset()
+	{
+		foreach (GameObject go in artifactsIn)
 		{
-			foreach (GameObject go in artifactsIn)
-			{
-				if (go.transform.childCount > 0)
-					go.transform.GetChild(0).gameObject.SetActive (false);
-			}
-			foreach (GameObject go in artifactsOut)
-			{
-				if (go.transform.childCount > 0)
-					go.transform.GetChild(0).gameObject.SetActive (false);
-			}
-			serieToSpawn = 0;
-			currentSpacesLength = 0;
-			artifactMinSpawnChance = 10;
-			artifactMaxSpawnChance = 60;
+			if (go.transform.childCount > 0)
+				go.transform.GetChild(0).gameObject.SetActive (false);
 		}
+		foreach (GameObject go in artifactsOut)
+		{
+			if (go.transform.childCount > 0)
+				go.transform.GetChild(0).gameObject.SetActive (false);
+		}
+		serieToSpawn = 0;
+		currentSpacesLength = 0;
+		artifactMinSpawnChance = 10;
+		artifactMaxSpawnChance = 60;		
 	}
 
 	void UpdatePosition()
