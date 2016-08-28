@@ -2,10 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 
-// TODO : add power ups
 // TODO : Anim on artifacts
 // TODO : fix algo
-// TODO : cut sounds + warning to put on some other audio source
+// TODO : cut sounds
 
 public class GameManager : MonoBehaviour {
 
@@ -135,9 +134,11 @@ public class GameManager : MonoBehaviour {
 		Image sr = imageWarning.GetComponent<Image> ();
 		GetComponent<ColorManager> ().enabled = false;
 		imageWarning.SetActive (true);
+
 		for (int i = 0; i < 5; ++i)
 		{
-			audioSource.PlayOneShot (beepSound, 0.3f);
+			Camera.main.GetComponent<AudioSource> ().PlayOneShot (beepSound, 0.3f);
+			//audioSource.PlayOneShot (beepSound, 0.3f);
 			for (float c = 0; c <= 1; c += 0.05f)
 			{
 				sr.color = new Color (sr.color.r, sr.color.g, sr.color.b, c);
