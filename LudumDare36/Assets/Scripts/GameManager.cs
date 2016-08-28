@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-
-// TODO : find music theme + inverse pitch with velocity
-// TODO : add power ups
 using UnityEngine.UI;
 
+// TODO : add power ups
+// TODO : Anim on artifacts
+// TODO : fix algo
+// TODO : cut sounds + warning to put on some other audio source
 
 public class GameManager : MonoBehaviour {
 
@@ -23,12 +24,17 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private GameObject canvasGameOver;
 	[SerializeField] private Text textScore;
 	[SerializeField] private Text textBestScore;
+	[SerializeField] private GameObject imageWarning;
+
+	[Header("Sound")]
+	[SerializeField] private AudioClip beepSound;
 
 	public enum GameState {MENU, PLAY, PAUSE};
 
 	private GameState _gameState = GameState.MENU;
 	private float score = 0;
 	private DataManager dm;
+	private AudioSource audioSource;
 
 	public GameState gameState
 	{
@@ -48,6 +54,7 @@ public class GameManager : MonoBehaviour {
 	void Start ()
 	{
 		dm = GetComponent<DataManager> ();
+		audioSource = GetComponent<AudioSource> ();
 		canvasGame.SetActive (false);
 		canvasGameOver.SetActive (false);
 		textBestScore.text = "Best : " + dm.BestScore;
@@ -63,6 +70,8 @@ public class GameManager : MonoBehaviour {
 			score += _velocity * Time.deltaTime;
 			textScore.text = ((int)score).ToString ();
 			/*Debug.Log (velocity);*/
+			if (Input.GetKeyDown (KeyCode.A))
+				StartCoroutine (EventCoroutine ());
 			break;
 		}
 	}
@@ -81,6 +90,16 @@ public class GameManager : MonoBehaviour {
 		canvasGameOver.SetActive (false);
 		score = 0;
 		Instantiate (playerPrefab, playerSpawnPoint.position, Quaternion.identity);
+		ResetGear ();
+	}
+
+	public void Quit()
+	{
+		#if UNITY_WEBGL
+		Application.ExternalEval("window.close()");
+		#else
+		Application.Quit();
+		#endif
 	}
 
 	public void GoToMenu()
@@ -100,6 +119,7 @@ public class GameManager : MonoBehaviour {
 	{
 		_gameState = GameState.PAUSE;
 		canvasGameOver.SetActive (true);
+		StopCoroutine ("EventCoroutine");
 		dm.SaveData ((int)score);
 		textBestScore.text = "Best : " + dm.BestScore;
 	}
@@ -107,5 +127,49 @@ public class GameManager : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		gearController.GenerateArtifacts (col.gameObject);
+	}
+
+	IEnumerator EventCoroutine()
+	{
+		// This makes the warning flash with sound
+		Image sr = imageWarning.GetComponent<Image> ();
+		GetComponent<ColorManager> ().enabled = false;
+		imageWarning.SetActive (true);
+		for (int i = 0; i < 5; ++i)
+		{
+			audioSource.PlayOneShot (beepSound, 0.3f);
+			for (float c = 0; c <= 1; c += 0.05f)
+			{
+				sr.color = new Color (sr.color.r, sr.color.g, sr.color.b, c);
+				yield return new WaitForSeconds (0.01f);
+			}
+			for (float c = 1; c >= 0; c -= 0.05f)
+			{
+				sr.color = new Color (sr.color.r, sr.color.g, sr.color.b, c);
+				yield return new WaitForSeconds (0.01f);
+			}
+		}
+		imageWarning.SetActive (false);
+		GetComponent<ColorManager> ().enabled = true;
+
+		// And this is the pitch drop
+		float initialPitch = audioSource.pitch;
+		float targetPitch = initialPitch * -1;
+		float targetDirection = -_direction;
+
+		for (float t = 0; t < 1; t += 0.05f)
+		{
+			audioSource.pitch = Mathf.SmoothStep (audioSource.pitch, 0, t);
+			_direction = Mathf.SmoothStep (_direction, 0, t);
+			yield return new WaitForSeconds (0.05f);
+		}
+		for (float t = 0; t < 1; t += 0.05f)
+		{
+			audioSource.pitch = Mathf.SmoothStep (audioSource.pitch, targetPitch, t);
+			_direction = Mathf.SmoothStep (_direction, targetDirection, t);
+			yield return new WaitForSeconds (0.05f);
+		}
+		_direction = targetDirection;
+		audioSource.pitch = targetPitch;
 	}
 }
