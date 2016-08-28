@@ -186,4 +186,10 @@ public class GearController : MonoBehaviour {
 			artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
 		return false;
 	}
+
+	// Called on reverse to cancel a serie
+	public void ResetSerie()
+	{
+		currentSpacesLength = 0;
+	}
 }

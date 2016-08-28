@@ -73,7 +73,6 @@ public class GameManager : MonoBehaviour {
 			_currentTimer -= Time.deltaTime;
 			if (_currentTimer <= 0)
 			{
-				return;
 				_currentTimer = reverseTimer;
 				if (Random.Range (0, 2) == 1)
 					StartCoroutine (EventCoroutine ());
@@ -147,7 +146,7 @@ public class GameManager : MonoBehaviour {
 		GetComponent<ColorManager> ().enabled = false;
 		imageWarning.SetActive (true);
 
-		for (int i = 0; i < 5; ++i)
+		for (int i = 0; i < 4; ++i)
 		{
 			Camera.main.GetComponent<AudioSource> ().PlayOneShot (beepSound, 0.3f);
 			//audioSource.PlayOneShot (beepSound, 0.3f);
@@ -178,6 +177,7 @@ public class GameManager : MonoBehaviour {
 			_direction = Mathf.SmoothStep (_direction, 0, t);
 			yield return new WaitForSeconds (0.05f);
 		}
+		gearController.ResetSerie ();
 		for (float t = 0; t < 1; t += 0.05f)
 		{
 			audioSource.pitch = Mathf.SmoothStep (audioSource.pitch, targetPitch, t);

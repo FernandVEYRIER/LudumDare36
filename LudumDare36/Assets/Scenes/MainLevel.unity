@@ -5708,9 +5708,9 @@ MonoBehaviour:
   playerSpawnPoint: {fileID: 274725110}
   gearController: {fileID: 1224366067}
   velocityMin: 0.3
-  velocityMax: 2.6
-  velocityStep: 0.0004
-  reverseTimer: 30
+  velocityMax: 2.9
+  velocityStep: 0.0008
+  reverseTimer: 20
   canvasGame: {fileID: 2106640831}
   canvasGameOver: {fileID: 681519906}
   textScore: {fileID: 1527704966}
@@ -8242,7 +8242,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522443084}
   m_LocalRotation: {x: 0, y: 0, z: 0.90068823, w: -0.4344661}
-  m_LocalPosition: {x: 5.8418007, y: -4.3566327, z: 0}
+  m_LocalPosition: {x: 5.87, y: -4.38, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -128.4973}
   m_Children:
@@ -8311,7 +8311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10814,10 +10814,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2069867624}
-  m_LocalRotation: {x: 0, y: 0, z: 0.95920783, w: -0.28270197}
-  m_LocalPosition: {x: 3.9613845, y: -6.044089, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.96381104, w: -0.26658633}
+  m_LocalPosition: {x: 3.89, y: -6.18, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -147.15689}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -149.0775}
   m_Children:
   - {fileID: 1504083423}
   m_Father: {fileID: 1224366066}
