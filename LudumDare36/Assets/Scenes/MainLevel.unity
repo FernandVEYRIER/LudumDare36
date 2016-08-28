@@ -170,6 +170,7 @@ GameObject:
   - 212: {fileID: 6378438}
   - 60: {fileID: 6378437}
   - 95: {fileID: 6378439}
+  - 114: {fileID: 6378440}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -272,6 +273,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &6378440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 6378435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &22934693
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,6 +294,8 @@ GameObject:
   - 4: {fileID: 22934694}
   - 212: {fileID: 22934696}
   - 60: {fileID: 22934695}
+  - 114: {fileID: 22934698}
+  - 95: {fileID: 22934697}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -295,10 +309,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22934693}
-  m_LocalRotation: {x: 0, y: 0, z: 0.05186189, w: 0.9986543}
-  m_LocalPosition: {x: -0.187, y: 0.019, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.9456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999999, y: 0.24999999, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 124199947}
   m_RootOrder: 0
@@ -362,6 +376,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &22934697
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22934693}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &22934698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22934693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &85628777
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +433,7 @@ Transform:
   m_Children:
   - {fileID: 2132241558}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 3
+  m_RootOrder: 20
 --- !u!61 &85628779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -417,6 +459,7 @@ GameObject:
   - 212: {fileID: 93921600}
   - 60: {fileID: 93921599}
   - 95: {fileID: 93921601}
+  - 114: {fileID: 93921602}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -519,6 +562,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &93921602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 93921597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &94678972
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +584,7 @@ GameObject:
   - 212: {fileID: 94678975}
   - 60: {fileID: 94678974}
   - 95: {fileID: 94678976}
+  - 114: {fileID: 94678977}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -632,6 +687,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &94678977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94678972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &108920714
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,14 +806,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109732517}
-  m_LocalRotation: {x: 0, y: 0, z: -0.40392104, w: 0.91479385}
-  m_LocalPosition: {x: 5.3653436, y: 4.891157, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.35433146, w: 0.9351199}
+  m_LocalPosition: {x: 4.9779963, y: 5.393243, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 312.353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -41.504997}
   m_Children:
   - {fileID: 1509506080}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 35
+  m_RootOrder: 14
 --- !u!61 &109732519
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -784,14 +850,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124199946}
-  m_LocalRotation: {x: 0, y: 0, z: 0.99041045, w: 0.13815627}
-  m_LocalPosition: {x: -1.9868441, y: -6.9830356, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.99624264, w: 0.08660578}
+  m_LocalPosition: {x: -1.2881968, y: -7.260834, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 164.11769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 170.0632}
   m_Children:
   - {fileID: 22934694}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 45
+  m_RootOrder: 4
 --- !u!61 &124199948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -835,7 +901,7 @@ Transform:
   m_Children:
   - {fileID: 2036193460}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 16
+  m_RootOrder: 33
 --- !u!61 &124611070
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -860,6 +926,8 @@ GameObject:
   - 4: {fileID: 125242496}
   - 212: {fileID: 125242498}
   - 60: {fileID: 125242497}
+  - 114: {fileID: 125242500}
+  - 95: {fileID: 125242499}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -873,10 +941,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 125242495}
-  m_LocalRotation: {x: 0, y: 0, z: 0.03363961, w: 0.99943405}
-  m_LocalPosition: {x: -0.179, y: -0.002, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.8555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.25, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1522443085}
   m_RootOrder: 0
@@ -940,6 +1008,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &125242499
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125242495}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &125242500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 125242495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128661541
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,7 +1065,7 @@ Transform:
   m_Children:
   - {fileID: 1764812652}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 9
+  m_RootOrder: 26
 --- !u!61 &128661543
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1006,14 +1102,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164470257}
-  m_LocalRotation: {x: 0, y: 0, z: 0.6388468, w: 0.76933396}
-  m_LocalPosition: {x: -7.1365695, y: 1.3340559, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6666552, w: 0.74536633}
+  m_LocalPosition: {x: -7.2843757, y: 0.67397594, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 79.4118}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 83.6188}
   m_Children:
   - {fileID: 1395383707}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 41
+  m_RootOrder: 8
 --- !u!61 &164470259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1038,6 +1134,8 @@ GameObject:
   - 4: {fileID: 204609348}
   - 212: {fileID: 204609350}
   - 60: {fileID: 204609349}
+  - 114: {fileID: 204609352}
+  - 95: {fileID: 204609351}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -1051,10 +1149,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204609347}
-  m_LocalRotation: {x: 0, y: 0, z: 0.06907026, w: 0.9976118}
-  m_LocalPosition: {x: -0.215, y: 0.003, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.9212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999997, y: 0.25, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2118469421}
   m_RootOrder: 0
@@ -1118,6 +1216,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &204609351
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204609347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &204609352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204609347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &214843396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1273,7 @@ Transform:
   m_Children:
   - {fileID: 1837806977}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 14
+  m_RootOrder: 31
 --- !u!61 &214843398
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1184,14 +1310,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 225125133}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.260188, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.68038225, w: 0.73285747}
+  m_LocalPosition: {x: 7.332188, y: 0.5760002, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 270}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85.747}
   m_Children:
   - {fileID: 1487007223}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 33
+  m_RootOrder: 16
 --- !u!61 &225125135
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1217,6 +1343,7 @@ GameObject:
   - 212: {fileID: 241341082}
   - 60: {fileID: 241341081}
   - 95: {fileID: 241341083}
+  - 114: {fileID: 241341084}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -1319,6 +1446,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &241341084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 241341079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &274725109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1514,7 @@ Transform:
   m_Children:
   - {fileID: 1204061330}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 24
+  m_RootOrder: 41
 --- !u!61 &294564263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1479,6 +1617,7 @@ GameObject:
   - 212: {fileID: 335392208}
   - 60: {fileID: 335392207}
   - 95: {fileID: 335392209}
+  - 114: {fileID: 335392210}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -1581,6 +1720,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &335392210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335392205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &336551759
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,7 +1760,7 @@ Transform:
   m_Children:
   - {fileID: 381745164}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 7
+  m_RootOrder: 24
 --- !u!61 &336551761
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1654,7 +1804,7 @@ Transform:
   m_Children:
   - {fileID: 1646424320}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 23
+  m_RootOrder: 40
 --- !u!61 &349866015
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1679,6 +1829,8 @@ GameObject:
   - 4: {fileID: 358161285}
   - 212: {fileID: 358161287}
   - 60: {fileID: 358161286}
+  - 114: {fileID: 358161289}
+  - 95: {fileID: 358161288}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -1692,10 +1844,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 358161284}
-  m_LocalRotation: {x: 0, y: 0, z: 0.04809592, w: 0.9988428}
-  m_LocalPosition: {x: -0.184, y: 0.006, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.5134997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.24999997, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1106330149}
   m_RootOrder: 0
@@ -1759,6 +1911,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &358161288
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358161284}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &358161289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358161284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371363104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1950,7 @@ GameObject:
   - 212: {fileID: 371363107}
   - 60: {fileID: 371363106}
   - 95: {fileID: 371363108}
+  - 114: {fileID: 371363109}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -1872,6 +2053,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &371363109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 371363104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &381745163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,6 +2075,7 @@ GameObject:
   - 212: {fileID: 381745166}
   - 60: {fileID: 381745165}
   - 95: {fileID: 381745167}
+  - 114: {fileID: 381745168}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -1985,6 +2178,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &381745168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 381745163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &383417388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +2200,7 @@ GameObject:
   - 212: {fileID: 383417391}
   - 60: {fileID: 383417390}
   - 95: {fileID: 383417392}
+  - 114: {fileID: 383417393}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -2098,6 +2303,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &383417393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383417388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &383523420
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,7 +2343,7 @@ Transform:
   m_Children:
   - {fileID: 6378436}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 21
+  m_RootOrder: 38
 --- !u!61 &383523422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2452,7 +2668,7 @@ Transform:
   m_Children:
   - {fileID: 1001660225}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 31
+  m_RootOrder: 48
 --- !u!61 &422086295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2505,6 +2721,8 @@ GameObject:
   - 4: {fileID: 494274233}
   - 212: {fileID: 494274235}
   - 60: {fileID: 494274234}
+  - 114: {fileID: 494274237}
+  - 95: {fileID: 494274236}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -2518,10 +2736,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 494274232}
-  m_LocalRotation: {x: 0, y: 0, z: 0.026361711, w: 0.9996525}
-  m_LocalPosition: {x: -0.164, y: 0.012, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.0212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999997, y: 0.24999999, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 588195433}
   m_RootOrder: 0
@@ -2585,6 +2803,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &494274236
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494274232}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &494274237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 494274232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &509879685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2596,6 +2842,7 @@ GameObject:
   - 212: {fileID: 509879688}
   - 60: {fileID: 509879687}
   - 95: {fileID: 509879689}
+  - 114: {fileID: 509879690}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -2698,6 +2945,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &509879690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 509879685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &513247635
 GameObject:
   m_ObjectHideFlags: 0
@@ -2720,14 +2978,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 513247635}
-  m_LocalRotation: {x: 0, y: 0, z: 0.8249971, w: -0.5651369}
-  m_LocalPosition: {x: 6.7699265, y: -2.6226764, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8100648, w: -0.5863405}
+  m_LocalPosition: {x: 7.01372, y: -2.1594653, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 248.8236}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -108.2045}
   m_Children:
   - {fileID: 1529546268}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 49
+  m_RootOrder: 0
 --- !u!61 &513247637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2771,7 +3029,7 @@ Transform:
   m_Children:
   - {fileID: 1616547556}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 25
+  m_RootOrder: 42
 --- !u!61 &545286295
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2815,7 +3073,7 @@ Transform:
   m_Children:
   - {fileID: 738051902}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 1
+  m_RootOrder: 18
 --- !u!61 &580246165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2852,14 +3110,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588195432}
-  m_LocalRotation: {x: 0, y: 0, z: 0.8736224, w: 0.48660448}
-  m_LocalPosition: {x: -6.1727366, y: -3.8219962, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8861466, w: 0.4634052}
+  m_LocalPosition: {x: -5.8682075, y: -4.405008, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 121.764694}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 124.7859}
   m_Children:
   - {fileID: 494274233}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 43
+  m_RootOrder: 6
 --- !u!61 &588195434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2977,7 +3235,7 @@ Transform:
   m_Children:
   - {fileID: 1236144435}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 18
+  m_RootOrder: 35
 --- !u!61 &635478900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3003,6 +3261,7 @@ GameObject:
   - 212: {fileID: 637444720}
   - 60: {fileID: 637444719}
   - 95: {fileID: 637444721}
+  - 114: {fileID: 637444722}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -3105,6 +3364,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &637444722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 637444717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &669258308
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,7 +3404,7 @@ Transform:
   m_Children:
   - {fileID: 1124306969}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 26
+  m_RootOrder: 43
 --- !u!61 &669258310
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3309,14 +3579,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 704425726}
-  m_LocalRotation: {x: 0, y: 0, z: 0.31779146, w: 0.94816065}
-  m_LocalPosition: {x: -4.81, y: 5.55, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.3674811, w: 0.93003106}
+  m_LocalPosition: {x: -5.015008, y: 5.370123, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 37.0588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 43.120697}
   m_Children:
   - {fileID: 1287360654}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 39
+  m_RootOrder: 10
 --- !u!61 &704425728
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3342,6 +3612,7 @@ GameObject:
   - 212: {fileID: 719944170}
   - 60: {fileID: 719944169}
   - 95: {fileID: 719944171}
+  - 114: {fileID: 719944172}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -3444,6 +3715,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &719944172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 719944167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738051901
 GameObject:
   m_ObjectHideFlags: 0
@@ -3455,6 +3737,7 @@ GameObject:
   - 212: {fileID: 738051904}
   - 60: {fileID: 738051903}
   - 95: {fileID: 738051905}
+  - 114: {fileID: 738051906}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -3557,6 +3840,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &738051906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 738051901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &756153186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,6 +3862,7 @@ GameObject:
   - 212: {fileID: 756153189}
   - 60: {fileID: 756153188}
   - 95: {fileID: 756153190}
+  - 114: {fileID: 756153191}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -3670,6 +3965,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &756153191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 756153186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775485323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +4109,7 @@ GameObject:
   - 212: {fileID: 798301153}
   - 60: {fileID: 798301152}
   - 95: {fileID: 798301154}
+  - 114: {fileID: 798301155}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -3905,6 +4212,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &798301155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 798301150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &799037752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,6 +4233,8 @@ GameObject:
   - 4: {fileID: 799037753}
   - 212: {fileID: 799037755}
   - 60: {fileID: 799037754}
+  - 114: {fileID: 799037757}
+  - 95: {fileID: 799037756}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -3930,7 +4250,7 @@ Transform:
   m_GameObject: {fileID: 799037752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.25000006, y: 0.25, z: 0.25}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1676118381}
@@ -3995,6 +4315,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &799037756
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 799037752}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &799037757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 799037752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &814190133
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,7 +4434,7 @@ Transform:
   m_Children:
   - {fileID: 335392206}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 27
+  m_RootOrder: 44
 --- !u!61 &815442921
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4130,7 +4478,7 @@ Transform:
   m_Children:
   - {fileID: 509879686}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 32
+  m_RootOrder: 49
 --- !u!61 &826027681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4174,7 +4522,7 @@ Transform:
   m_Children:
   - {fileID: 1295883955}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 12
+  m_RootOrder: 29
 --- !u!61 &826936826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4200,6 +4548,7 @@ GameObject:
   - 212: {fileID: 828493515}
   - 60: {fileID: 828493514}
   - 95: {fileID: 828493516}
+  - 114: {fileID: 828493517}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -4302,6 +4651,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &828493517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828493512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &900058292
 GameObject:
   m_ObjectHideFlags: 0
@@ -4313,6 +4673,7 @@ GameObject:
   - 212: {fileID: 900058295}
   - 60: {fileID: 900058294}
   - 95: {fileID: 900058296}
+  - 114: {fileID: 900058297}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -4415,6 +4776,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &900058297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900058292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &905007867
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +4989,8 @@ GameObject:
   - 4: {fileID: 926711692}
   - 212: {fileID: 926711694}
   - 60: {fileID: 926711693}
+  - 114: {fileID: 926711696}
+  - 95: {fileID: 926711695}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -4630,10 +5004,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926711691}
-  m_LocalRotation: {x: 0, y: 0, z: 0.027490942, w: 0.9996221}
-  m_LocalPosition: {x: -0.129, y: 0.009, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.1506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25000006, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1958597162}
   m_RootOrder: 0
@@ -4697,6 +5071,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &926711695
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926711691}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &926711696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 926711691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &991908795
 Prefab:
   m_ObjectHideFlags: 0
@@ -4843,6 +5245,7 @@ GameObject:
   - 212: {fileID: 1001660227}
   - 60: {fileID: 1001660226}
   - 95: {fileID: 1001660228}
+  - 114: {fileID: 1001660229}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -4945,6 +5348,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1001660229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001660224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1057982892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4967,14 +5381,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1057982892}
-  m_LocalRotation: {x: 0, y: 0, z: 0.13815634, w: 0.99041045}
-  m_LocalPosition: {x: -2.57, y: 6.82, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.16581243, w: 0.9861573}
+  m_LocalPosition: {x: -2.5661526, y: 6.821095, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.8824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.0889}
   m_Children:
   - {fileID: 1956910463}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 38
+  m_RootOrder: 11
 --- !u!61 &1057982894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5210,7 +5624,7 @@ Transform:
   m_Children:
   - {fileID: 371363105}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 15
+  m_RootOrder: 32
 --- !u!61 &1103315904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5247,14 +5661,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1106330148}
-  m_LocalRotation: {x: 0, y: 0, z: 0.4866045, w: 0.87362236}
-  m_LocalPosition: {x: -6.1727366, y: 3.8219965, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.52805907, w: 0.8492077}
+  m_LocalPosition: {x: -6.580596, y: 3.208871, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 58.2353}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 63.7488}
   m_Children:
   - {fileID: 358161285}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 40
+  m_RootOrder: 9
 --- !u!61 &1106330150
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5280,6 +5694,7 @@ GameObject:
   - 212: {fileID: 1124306971}
   - 60: {fileID: 1124306970}
   - 95: {fileID: 1124306972}
+  - 114: {fileID: 1124306973}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -5382,6 +5797,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1124306973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1124306968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1137386362
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,6 +5929,8 @@ GameObject:
   - 4: {fileID: 1148474249}
   - 212: {fileID: 1148474251}
   - 60: {fileID: 1148474250}
+  - 114: {fileID: 1148474253}
+  - 95: {fileID: 1148474252}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -5516,10 +5944,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1148474248}
-  m_LocalRotation: {x: 0, y: 0, z: 0.08902221, w: 0.9960297}
-  m_LocalPosition: {x: -0.223, y: -0.011, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 10.2147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999994, y: 0.24999996, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1811885194}
   m_RootOrder: 0
@@ -5583,6 +6011,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1148474252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148474248}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1148474253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1148474248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1191040883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5612,7 +6068,7 @@ Transform:
   m_Children:
   - {fileID: 1867868718}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 6
+  m_RootOrder: 23
 --- !u!61 &1191040885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5638,6 +6094,7 @@ GameObject:
   - 212: {fileID: 1204061332}
   - 60: {fileID: 1204061331}
   - 95: {fileID: 1204061333}
+  - 114: {fileID: 1204061334}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -5740,6 +6197,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1204061334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1204061329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1218980152
 GameObject:
   m_ObjectHideFlags: 0
@@ -5762,14 +6230,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218980152}
-  m_LocalRotation: {x: 0, y: 0, z: -0.5651365, w: 0.8249975}
-  m_LocalPosition: {x: 6.7699237, y: 2.6226826, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5363097, w: 0.8440213}
+  m_LocalPosition: {x: 6.605027, y: 3.2365696, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 291.17648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -64.8655}
   m_Children:
   - {fileID: 1386120665}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 34
+  m_RootOrder: 15
 --- !u!61 &1218980154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5842,6 +6310,23 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 513247636}
+  - {fileID: 1522443085}
+  - {fileID: 2069867625}
+  - {fileID: 1811885194}
+  - {fileID: 124199947}
+  - {fileID: 1935682734}
+  - {fileID: 588195433}
+  - {fileID: 2118469421}
+  - {fileID: 164470258}
+  - {fileID: 1106330149}
+  - {fileID: 704425727}
+  - {fileID: 1057982893}
+  - {fileID: 1676118381}
+  - {fileID: 1958597162}
+  - {fileID: 109732518}
+  - {fileID: 1218980153}
+  - {fileID: 225125134}
   - {fileID: 2007522818}
   - {fileID: 580246164}
   - {fileID: 1751616495}
@@ -5875,23 +6360,6 @@ Transform:
   - {fileID: 2127181738}
   - {fileID: 422086294}
   - {fileID: 826027680}
-  - {fileID: 225125134}
-  - {fileID: 1218980153}
-  - {fileID: 109732518}
-  - {fileID: 1958597162}
-  - {fileID: 1676118381}
-  - {fileID: 1057982893}
-  - {fileID: 704425727}
-  - {fileID: 1106330149}
-  - {fileID: 164470258}
-  - {fileID: 2118469421}
-  - {fileID: 588195433}
-  - {fileID: 1935682734}
-  - {fileID: 124199947}
-  - {fileID: 1811885194}
-  - {fileID: 2069867625}
-  - {fileID: 1522443085}
-  - {fileID: 513247636}
   m_Father: {fileID: 0}
   m_RootOrder: 3
 --- !u!114 &1224366067
@@ -5918,6 +6386,7 @@ GameObject:
   - 212: {fileID: 1236144437}
   - 60: {fileID: 1236144436}
   - 95: {fileID: 1236144438}
+  - 114: {fileID: 1236144439}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -6020,6 +6489,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1236144439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236144434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276866854
 GameObject:
   m_ObjectHideFlags: 0
@@ -6123,7 +6603,7 @@ Transform:
   m_Children:
   - {fileID: 1818678910}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 20
+  m_RootOrder: 37
 --- !u!61 &1279071154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6149,6 +6629,7 @@ GameObject:
   - 212: {fileID: 1280570311}
   - 60: {fileID: 1280570310}
   - 95: {fileID: 1280570312}
+  - 114: {fileID: 1280570313}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -6251,6 +6732,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1280570313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1280570308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1281583792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,7 +6772,7 @@ Transform:
   m_Children:
   - {fileID: 241341080}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 13
+  m_RootOrder: 30
 --- !u!61 &1281583794
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6305,6 +6797,8 @@ GameObject:
   - 4: {fileID: 1287360654}
   - 212: {fileID: 1287360656}
   - 60: {fileID: 1287360655}
+  - 114: {fileID: 1287360658}
+  - 95: {fileID: 1287360657}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -6318,10 +6812,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1287360653}
-  m_LocalRotation: {x: 0, y: 0, z: 0.05287519, w: 0.99860114}
-  m_LocalPosition: {x: -0.068, y: -0.005, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.0618997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999997, y: 0.24999997, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 704425727}
   m_RootOrder: 0
@@ -6385,6 +6879,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1287360657
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287360653}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1287360658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287360653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1289663395
 GameObject:
   m_ObjectHideFlags: 0
@@ -6470,6 +6992,7 @@ GameObject:
   - 212: {fileID: 1295883957}
   - 60: {fileID: 1295883956}
   - 95: {fileID: 1295883958}
+  - 114: {fileID: 1295883959}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -6572,6 +7095,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1295883959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295883954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1337060112
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,6 +7191,7 @@ GameObject:
   - 212: {fileID: 1347378148}
   - 60: {fileID: 1347378147}
   - 95: {fileID: 1347378149}
+  - 114: {fileID: 1347378150}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -6759,6 +7294,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1347378150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1347378145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1386120664
 GameObject:
   m_ObjectHideFlags: 0
@@ -6769,6 +7315,8 @@ GameObject:
   - 4: {fileID: 1386120665}
   - 212: {fileID: 1386120667}
   - 60: {fileID: 1386120666}
+  - 114: {fileID: 1386120669}
+  - 95: {fileID: 1386120668}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -6782,10 +7330,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1386120664}
-  m_LocalRotation: {x: 0, y: 0, z: 0.034533113, w: 0.9994036}
-  m_LocalPosition: {x: -0.158, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.958}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000000029802322, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999999, y: 0.25, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1218980153}
   m_RootOrder: 0
@@ -6849,6 +7397,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1386120668
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386120664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1386120669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1386120664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1395383706
 GameObject:
   m_ObjectHideFlags: 0
@@ -6859,6 +7435,8 @@ GameObject:
   - 4: {fileID: 1395383707}
   - 212: {fileID: 1395383709}
   - 60: {fileID: 1395383708}
+  - 114: {fileID: 1395383711}
+  - 95: {fileID: 1395383710}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -6872,10 +7450,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395383706}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0367056, w: 0.99932617}
-  m_LocalPosition: {x: -0.169, y: 0.006, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.2071}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999996, y: 0.24999996, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 164470258}
   m_RootOrder: 0
@@ -6939,6 +7517,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1395383710
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395383706}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1395383711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1395383706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1442343537
 GameObject:
   m_ObjectHideFlags: 0
@@ -6968,7 +7574,7 @@ Transform:
   m_Children:
   - {fileID: 93921598}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 19
+  m_RootOrder: 36
 --- !u!61 &1442343539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6993,6 +7599,8 @@ GameObject:
   - 4: {fileID: 1487007223}
   - 212: {fileID: 1487007225}
   - 60: {fileID: 1487007224}
+  - 114: {fileID: 1487007227}
+  - 95: {fileID: 1487007226}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -7006,10 +7614,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1487007222}
-  m_LocalRotation: {x: 0, y: 0, z: 0.037105616, w: 0.9993114}
-  m_LocalPosition: {x: -0.144, y: 0.018, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.253}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999996, y: 0.25, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 225125134}
   m_RootOrder: 0
@@ -7073,6 +7681,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1487007226
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487007222}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1487007227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1487007222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504083422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7083,6 +7719,8 @@ GameObject:
   - 4: {fileID: 1504083423}
   - 212: {fileID: 1504083425}
   - 60: {fileID: 1504083424}
+  - 114: {fileID: 1504083427}
+  - 95: {fileID: 1504083426}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -7096,10 +7734,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504083422}
-  m_LocalRotation: {x: 0, y: 0, z: 0.05558141, w: 0.99845415}
-  m_LocalPosition: {x: -0.213, y: -0.021, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.3725}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000006, y: 0.25000006, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 2069867625}
   m_RootOrder: 0
@@ -7163,6 +7801,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1504083426
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504083422}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1504083427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504083422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1509506079
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,6 +7839,8 @@ GameObject:
   - 4: {fileID: 1509506080}
   - 212: {fileID: 1509506082}
   - 60: {fileID: 1509506081}
+  - 114: {fileID: 1509506084}
+  - 95: {fileID: 1509506083}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -7186,10 +7854,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1509506079}
-  m_LocalRotation: {x: 0, y: 0, z: 0.053574365, w: 0.9985639}
-  m_LocalPosition: {x: -0.158, y: 0.013, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.1421}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 109732518}
   m_RootOrder: 0
@@ -7253,6 +7921,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1509506083
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1509506079}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1509506084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1509506079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1522443084
 GameObject:
   m_ObjectHideFlags: 0
@@ -7275,14 +7971,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1522443084}
-  m_LocalRotation: {x: 0, y: 0, z: 0.9147937, w: -0.40392137}
-  m_LocalPosition: {x: 5.365347, y: -4.891153, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.90068823, w: -0.4344661}
+  m_LocalPosition: {x: 5.8418007, y: -4.3566327, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 227.6471}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -128.4973}
   m_Children:
   - {fileID: 125242496}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 48
+  m_RootOrder: 1
 --- !u!61 &1522443086
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7399,6 +8095,8 @@ GameObject:
   - 4: {fileID: 1529546268}
   - 212: {fileID: 1529546270}
   - 60: {fileID: 1529546269}
+  - 114: {fileID: 1529546272}
+  - 95: {fileID: 1529546271}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -7412,10 +8110,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529546267}
-  m_LocalRotation: {x: 0, y: 0, z: 0.025931701, w: 0.9996638}
-  m_LocalPosition: {x: -0.13, y: 0.015, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.9719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999996, y: 0.24999994, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 513247636}
   m_RootOrder: 0
@@ -7479,6 +8177,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1529546271
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529546267}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1529546272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1529546267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579274757
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,7 +8234,7 @@ Transform:
   m_Children:
   - {fileID: 94678973}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 17
+  m_RootOrder: 34
 --- !u!61 &1579274759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7552,7 +8278,7 @@ Transform:
   m_Children:
   - {fileID: 756153187}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 10
+  m_RootOrder: 27
 --- !u!61 &1602511342
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7578,6 +8304,7 @@ GameObject:
   - 212: {fileID: 1616547558}
   - 60: {fileID: 1616547557}
   - 95: {fileID: 1616547559}
+  - 114: {fileID: 1616547560}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -7680,6 +8407,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1616547560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1616547555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1632176405
 GameObject:
   m_ObjectHideFlags: 0
@@ -7709,7 +8447,7 @@ Transform:
   m_Children:
   - {fileID: 900058293}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 4
+  m_RootOrder: 21
 --- !u!61 &1632176407
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7734,6 +8472,8 @@ GameObject:
   - 4: {fileID: 1642717054}
   - 212: {fileID: 1642717056}
   - 60: {fileID: 1642717055}
+  - 114: {fileID: 1642717058}
+  - 95: {fileID: 1642717057}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -7747,10 +8487,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1642717053}
-  m_LocalRotation: {x: 0, y: 0, z: 0.047335338, w: 0.99887913}
-  m_LocalPosition: {x: -0.178, y: 0.017, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.4263}
+  m_LocalRotation: {x: 0, y: 0, z: 0.000000029802322, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.24999999, y: 0.24999997, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1935682734}
   m_RootOrder: 0
@@ -7814,6 +8554,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1642717057
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642717053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1642717058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642717053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1646424319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7825,6 +8593,7 @@ GameObject:
   - 212: {fileID: 1646424322}
   - 60: {fileID: 1646424321}
   - 95: {fileID: 1646424323}
+  - 114: {fileID: 1646424324}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -7927,6 +8696,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1646424324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646424319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1647404105
 GameObject:
   m_ObjectHideFlags: 0
@@ -8038,11 +8818,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.0030230337, w: 0.99999547}
   m_LocalPosition: {x: 0.08, y: 7.28, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 360.3465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.3464}
   m_Children:
   - {fileID: 799037753}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 37
+  m_RootOrder: 12
 --- !u!61 &1676118382
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8068,6 +8848,7 @@ GameObject:
   - 212: {fileID: 1688896685}
   - 60: {fileID: 1688896684}
   - 95: {fileID: 1688896686}
+  - 114: {fileID: 1688896687}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8170,6 +8951,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1688896687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688896682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751616494
 GameObject:
   m_ObjectHideFlags: 0
@@ -8199,7 +8991,7 @@ Transform:
   m_Children:
   - {fileID: 1688896683}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 2
+  m_RootOrder: 19
 --- !u!61 &1751616496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8243,7 +9035,7 @@ Transform:
   m_Children:
   - {fileID: 1875275453}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 28
+  m_RootOrder: 45
 --- !u!61 &1756833588
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8287,7 +9079,7 @@ Transform:
   m_Children:
   - {fileID: 1280570309}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 22
+  m_RootOrder: 39
 --- !u!61 &1758972271
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8313,6 +9105,7 @@ GameObject:
   - 212: {fileID: 1764812654}
   - 60: {fileID: 1764812653}
   - 95: {fileID: 1764812655}
+  - 114: {fileID: 1764812656}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8415,6 +9208,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1764812656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764812651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1811885193
 GameObject:
   m_ObjectHideFlags: 0
@@ -8437,14 +9241,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811885193}
-  m_LocalRotation: {x: 0, y: 0, z: 0.99893296, w: -0.046183646}
-  m_LocalPosition: {x: 0.66988784, y: -7.229217, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9908555, w: -0.13492751}
+  m_LocalPosition: {x: 1.5540228, y: -7.1031013, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 185.2941}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -164.4912}
   m_Children:
   - {fileID: 1148474249}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 46
+  m_RootOrder: 3
 --- !u!61 &1811885195
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8470,6 +9274,7 @@ GameObject:
   - 212: {fileID: 1818678912}
   - 60: {fileID: 1818678911}
   - 95: {fileID: 1818678913}
+  - 114: {fileID: 1818678914}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8572,6 +9377,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1818678914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1818678909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1837806976
 GameObject:
   m_ObjectHideFlags: 0
@@ -8583,6 +9399,7 @@ GameObject:
   - 212: {fileID: 1837806979}
   - 60: {fileID: 1837806978}
   - 95: {fileID: 1837806980}
+  - 114: {fileID: 1837806981}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8685,6 +9502,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1837806981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1837806976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867868717
 GameObject:
   m_ObjectHideFlags: 0
@@ -8696,6 +9524,7 @@ GameObject:
   - 212: {fileID: 1867868720}
   - 60: {fileID: 1867868719}
   - 95: {fileID: 1867868721}
+  - 114: {fileID: 1867868722}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8798,6 +9627,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1867868722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1867868717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1867887313
 GameObject:
   m_ObjectHideFlags: 0
@@ -8827,7 +9667,7 @@ Transform:
   m_Children:
   - {fileID: 828493513}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 11
+  m_RootOrder: 28
 --- !u!61 &1867887315
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8853,6 +9693,7 @@ GameObject:
   - 212: {fileID: 1875275455}
   - 60: {fileID: 1875275454}
   - 95: {fileID: 1875275456}
+  - 114: {fileID: 1875275457}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -8955,6 +9796,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1875275457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875275452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1935682733
 GameObject:
   m_ObjectHideFlags: 0
@@ -8977,14 +9829,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1935682733}
-  m_LocalRotation: {x: 0, y: 0, z: 0.94816065, w: 0.31779143}
-  m_LocalPosition: {x: -4.3752413, y: -5.793754, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.9621406, w: 0.27255374}
+  m_LocalPosition: {x: -3.848032, y: -6.2770953, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 142.9412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 148.3674}
   m_Children:
   - {fileID: 1642717054}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 44
+  m_RootOrder: 5
 --- !u!61 &1935682735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9028,7 +9880,7 @@ Transform:
   m_Children:
   - {fileID: 383417389}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 29
+  m_RootOrder: 46
 --- !u!61 &1937389701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9072,7 +9924,7 @@ Transform:
   m_Children:
   - {fileID: 637444718}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 5
+  m_RootOrder: 22
 --- !u!61 &1955518566
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9097,6 +9949,8 @@ GameObject:
   - 4: {fileID: 1956910463}
   - 212: {fileID: 1956910465}
   - 60: {fileID: 1956910464}
+  - 114: {fileID: 1956910467}
+  - 95: {fileID: 1956910466}
   m_Layer: 0
   m_Name: ArtifactIn
   m_TagString: Obstacle
@@ -9110,10 +9964,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1956910462}
-  m_LocalRotation: {x: 0, y: 0, z: 0.027978487, w: 0.9996085}
-  m_LocalPosition: {x: 0.001, y: -0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.2064998}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25000003, y: 0.24999999, z: 0.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1057982893}
   m_RootOrder: 0
@@ -9177,6 +10031,34 @@ SpriteRenderer:
   m_Color: {r: 0.15294118, g: 0.15294118, b: 0.15294118, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!95 &1956910466
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956910462}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dd639f94b4102a41b2dd5424626ac2c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1956910467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956910462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1958597161
 GameObject:
   m_ObjectHideFlags: 0
@@ -9199,14 +10081,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958597161}
-  m_LocalRotation: {x: 0, y: 0, z: -0.22895053, w: 0.9734381}
-  m_LocalPosition: {x: 3.2361443, y: 6.499054, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.20210329, w: 0.9793643}
+  m_LocalPosition: {x: 2.7902865, y: 6.761281, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 333.5294}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -23.32}
   m_Children:
   - {fileID: 926711692}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 36
+  m_RootOrder: 13
 --- !u!61 &1958597163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9250,7 +10132,7 @@ Transform:
   m_Children:
   - {fileID: 719944168}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 0
+  m_RootOrder: 17
 --- !u!61 &2007522819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9294,7 +10176,7 @@ Transform:
   m_Children:
   - {fileID: 1347378146}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 8
+  m_RootOrder: 25
 --- !u!61 &2023839958
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9320,6 +10202,7 @@ GameObject:
   - 212: {fileID: 2036193462}
   - 60: {fileID: 2036193461}
   - 95: {fileID: 2036193463}
+  - 114: {fileID: 2036193464}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -9422,6 +10305,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2036193464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2036193459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2069867624
 GameObject:
   m_ObjectHideFlags: 0
@@ -9444,14 +10338,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2069867624}
-  m_LocalRotation: {x: 0, y: 0, z: 0.973438, w: -0.22895084}
-  m_LocalPosition: {x: 3.2361476, y: -6.4990525, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.95920783, w: -0.28270197}
+  m_LocalPosition: {x: 3.9613845, y: -6.044089, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 206.47069}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -147.15689}
   m_Children:
   - {fileID: 1504083423}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 47
+  m_RootOrder: 2
 --- !u!61 &2069867626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9745,14 +10639,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2118469420}
-  m_LocalRotation: {x: 0, y: 0, z: 0.76933396, w: 0.6388468}
-  m_LocalPosition: {x: -7.1365695, y: -1.3340559, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.81162196, w: 0.58418304}
+  m_LocalPosition: {x: -6.9903407, y: -2.1816182, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 100.588196}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 108.5094}
   m_Children:
   - {fileID: 204609348}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 42
+  m_RootOrder: 7
 --- !u!61 &2118469422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9796,7 +10690,7 @@ Transform:
   m_Children:
   - {fileID: 798301151}
   m_Father: {fileID: 1224366066}
-  m_RootOrder: 30
+  m_RootOrder: 47
 --- !u!61 &2127181739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9822,6 +10716,7 @@ GameObject:
   - 212: {fileID: 2132241560}
   - 60: {fileID: 2132241559}
   - 95: {fileID: 2132241561}
+  - 114: {fileID: 2132241562}
   m_Layer: 0
   m_Name: ArtifactOut
   m_TagString: Obstacle
@@ -9924,3 +10819,14 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &2132241562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132241557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4be364ba51bfaf4891ef7a15784f277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

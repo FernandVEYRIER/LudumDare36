@@ -117,7 +117,11 @@ public class GearController : MonoBehaviour {
 		if (serieToSpawn == 0 && Random.Range (artifactMinSpawnChance, artifactMaxSpawnChance) < 50f)
 		{
 			if (artifactCollided.transform.childCount > 0)
-				artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+			{
+				//artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+				//artifactCollided.GetComponentInChildren<ArtifactController> ().Hide ();
+				artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
+			}
 			
 			++currentSpacesLength;
 			return;
@@ -152,7 +156,11 @@ public class GearController : MonoBehaviour {
 			else
 			{
 				if (artifactCollided.transform.childCount > 0)
-					artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+				{
+					//artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+					artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
+					//artifactCollided.GetComponentInChildren<ArtifactController> ().Hide ();
+				}
 				++currentSpacesLength;
 			}
 		}
