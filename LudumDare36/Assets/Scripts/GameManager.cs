@@ -160,6 +160,8 @@ public class GameManager : MonoBehaviour {
 		float targetPitch = initialPitch * -1;
 		float targetDirection = -_direction;
 
+		// Gets current audio source from the manager
+		audioSource = soundManager.GetAudioSource ();
 		for (float t = 0; t < 1; t += 0.05f)
 		{
 			audioSource.pitch = Mathf.SmoothStep (audioSource.pitch, 0, t);

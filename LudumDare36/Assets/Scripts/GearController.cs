@@ -185,7 +185,8 @@ public class GearController : MonoBehaviour {
 			return true;
 		}
 		else
-			artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+			//artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
+			artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
 		return false;
 	}
 }

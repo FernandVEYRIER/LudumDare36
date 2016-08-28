@@ -9,25 +9,33 @@ public class SoundManager : MonoBehaviour {
 
 	public AudioSource source1;
 	public AudioSource source2;
+	public AudioSource source2bis;
 	public AudioSource source3;
+
+	private AudioSource source2Original;
+	private AudioSource source2BisOriginal;
 
 	// Use this for initialization
 	void Start ()
 	{
+		source2Original = source2;
+		source2BisOriginal = source2bis;
 		PlayMenuMusic ();
 	}
 
 	public void PlayMenuMusic()
 	{
 		StopAllCoroutines ();
-		StartCoroutine (MenuCoroutine ());
 		StartCoroutine (CrossFade(source3, source1));
 	}
 
 	public void PlayGameMusic()
 	{
+		source2 = source2Original;
+		source2bis = source2BisOriginal;
 		StopAllCoroutines ();
 		StartCoroutine (CrossFade(source1, source2));
+		StartCoroutine (GameMusicLoop ());
 	}
 
 	public void PlayEndMusic()
@@ -41,15 +49,15 @@ public class SoundManager : MonoBehaviour {
 		return source2;
 	}
 
-	IEnumerator MenuCoroutine()
+	IEnumerator GameMusicLoop()
 	{
-		if (!source1.isPlaying)
-			source1.Play ();
-		
 		while (true)
 		{
-			yield return new WaitForSeconds (menuMusic.length - Time.deltaTime);
-			source1.pitch *= -1;
+			yield return new WaitForSeconds (gameMusic.length * 0.95f);
+			StartCoroutine (CrossFade (source2, source2bis));
+			AudioSource tmp = source2;
+			source2 = source2bis;
+			source2bis = tmp;
 		}
 	}
 
