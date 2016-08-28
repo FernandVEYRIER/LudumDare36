@@ -333,7 +333,6 @@ MonoBehaviour:
   endMusic: {fileID: 8300000, guid: 85db0f994e364cd4382b510328d543d2, type: 3}
   source1: {fileID: 1782240690}
   source2: {fileID: 1020151479}
-  source2bis: {fileID: 289157930}
   source3: {fileID: 2067953456}
 --- !u!1 &22934693
 GameObject:
@@ -3353,7 +3352,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: 
 --- !u!222 &629361401
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5709,8 +5708,9 @@ MonoBehaviour:
   playerSpawnPoint: {fileID: 274725110}
   gearController: {fileID: 1224366067}
   velocityMin: 0.3
-  velocityMax: 2.5
-  velocityStep: 0.00025
+  velocityMax: 2.6
+  velocityStep: 0.0004
+  reverseTimer: 30
   canvasGame: {fileID: 2106640831}
   canvasGameOver: {fileID: 681519906}
   textScore: {fileID: 1527704966}
@@ -6142,7 +6142,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1137386365}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1087759233}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1137386365

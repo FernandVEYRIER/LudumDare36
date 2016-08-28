@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour {
 	public float velocityMin;
 	public float velocityMax;
 	public float velocityStep;
+	public float reverseTimer;
 	private float _velocity = 0;
 	private float _direction = 1;
+	private float _currentTimer;
 
 	[Header("Canvas")]
 	[SerializeField] private GameObject canvasGame;
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour {
 		canvasGame.SetActive (false);
 		canvasGameOver.SetActive (false);
 		textBestScore.text = "Best : " + dm.BestScore;
+		_currentTimer = reverseTimer;
 	}
 	
 	// Update is called once per frame
@@ -67,9 +70,14 @@ public class GameManager : MonoBehaviour {
 			_velocity = Mathf.Clamp (_velocity + velocityStep, velocityMin, velocityMax);
 			score += _velocity * Time.deltaTime;
 			textScore.text = ((int)score).ToString ();
-			/*Debug.Log (velocity);*/
-			if (Input.GetKeyDown (KeyCode.A))
-				StartCoroutine (EventCoroutine ());
+			_currentTimer -= Time.deltaTime;
+			if (_currentTimer <= 0)
+			{
+				return;
+				_currentTimer = reverseTimer;
+				if (Random.Range (0, 2) == 1)
+					StartCoroutine (EventCoroutine ());
+			}
 			break;
 		}
 	}
@@ -82,8 +90,10 @@ public class GameManager : MonoBehaviour {
 	// Called from anim in camera behaviour
 	public void StartGame()
 	{
+		_currentTimer = reverseTimer;
 		_gameState = GameState.PLAY;
 		_velocity = velocityMin;
+		_direction = 1;
 		canvasGame.SetActive (true);
 		canvasGameOver.SetActive (false);
 		score = 0;

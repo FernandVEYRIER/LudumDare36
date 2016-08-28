@@ -72,28 +72,24 @@ public class GearController : MonoBehaviour {
 		foreach (GameObject go in artifactsIn)
 		{
 			if (go.transform.childCount > 0)
-				go.transform.GetChild(0).gameObject.SetActive (false);
+				go.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
+				//go.transform.GetChild(0).gameObject.SetActive (false);
 		}
 		foreach (GameObject go in artifactsOut)
 		{
 			if (go.transform.childCount > 0)
-				go.transform.GetChild(0).gameObject.SetActive (false);
+				go.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
+				//go.transform.GetChild(0).gameObject.SetActive (false);
 		}
 		serieToSpawn = 0;
-		currentSpacesLength = 0;
-		artifactMinSpawnChance = 10;
+		currentSpacesLength = 999;
+		artifactMinSpawnChance = 40;
 		artifactMaxSpawnChance = 60;		
 	}
 
 	void UpdatePosition()
 	{
 		transform.Rotate (new Vector3 (0, 0, gm.velocity * -0.5f * gm.direction));
-
-		if (Input.GetKeyDown(KeyCode.A))
-		{
-			foreach (GameObject go in artifactsIn)
-				go.SetActive (true);
-		}
 	}
 
 	// The rules :
@@ -102,50 +98,54 @@ public class GearController : MonoBehaviour {
 	// Each serie as at least 2 empty spaces between each
 	// Chances to have artifacts increases over time
 	private int serieToSpawn = 0;
-	private int currentSpacesLength = 0;
-	private float artifactMinSpawnChance = 10;
+	private int currentSpacesLength = 999;
+	private float artifactMinSpawnChance = 40;
 	private float artifactMaxSpawnChance = 60;
 	private ArtifactType artifactType = ArtifactType.OUTER;
+	private const int minSpaces = 3;
 	private enum ArtifactType {INNER, OUTER, EMPTY};
 
 	public void GenerateArtifacts(GameObject artifactCollided)
 	{
 		if (gm.gameState != GameManager.GameState.PLAY)
 			return;
-		
-		// First, we chack if we do a wall
-		if (serieToSpawn == 0 && Random.Range (artifactMinSpawnChance, artifactMaxSpawnChance) < 50f)
+
+
+		float rand = Random.Range (artifactMinSpawnChance, artifactMaxSpawnChance);
+
+		// First, we chack if we do a wall and if we are not in a serie
+		if (serieToSpawn == 0 && rand < 50f)
 		{
 			if (artifactCollided.transform.childCount > 0)
 			{
-				//artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
-				//artifactCollided.GetComponentInChildren<ArtifactController> ().Hide ();
 				artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
 			}
-			
-			++currentSpacesLength;
+
+			if (artifactCollided.name.ToUpper() == artifactType.ToString())
+				++currentSpacesLength;
 			return;
 		}
 
+		if (serieToSpawn == 0 && artifactCollided.name.ToUpper() == artifactType.ToString())
+			++currentSpacesLength;
+
 		// Determines then size of the artefact if not already done
-		if (serieToSpawn == 0 && currentSpacesLength >= 8)
+		if (serieToSpawn == 0 && currentSpacesLength >= minSpaces + ((artifactType == ArtifactType.OUTER) ? 1 : 0))
 		{
 			// Determines what kind of artifact we are going to spawn
-			artifactType = artifactType == ArtifactType.INNER ? ArtifactType.OUTER : ArtifactType.INNER;
+			artifactType = (artifactType == ArtifactType.INNER) ? ArtifactType.OUTER : ArtifactType.INNER;
 
 			if (artifactType == ArtifactType.INNER)
 				serieToSpawn = Random.Range (1, 3);
 			else
 				serieToSpawn = Random.Range (1, 4);
 
-			Debug.Log ("Going to generate a " + serieToSpawn + " serie TYPE = " + artifactType);
-
 			ManageArtifact (artifactCollided);
 			currentSpacesLength = 0;
 
 			// Each new serie we increase the chance of artifacts
 			artifactMinSpawnChance = Mathf.Clamp(artifactMinSpawnChance + 0.01f, 10, 40);
-			artifactMinSpawnChance = Mathf.Clamp(artifactMaxSpawnChance + 0.01f, 60, 90);
+			artifactMaxSpawnChance = Mathf.Clamp(artifactMaxSpawnChance + 0.01f, 60, 90);
 		}
 		else
 		{
@@ -157,11 +157,8 @@ public class GearController : MonoBehaviour {
 			{
 				if (artifactCollided.transform.childCount > 0)
 				{
-					//artifactCollided.transform.GetChild (0).gameObject.SetActive (false);
 					artifactCollided.transform.GetChild (0).gameObject.GetComponent<ArtifactController>().Hide();
-					//artifactCollided.GetComponentInChildren<ArtifactController> ().Hide ();
 				}
-				++currentSpacesLength;
 			}
 		}
 	}
