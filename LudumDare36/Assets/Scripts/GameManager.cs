@@ -2,9 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-// TODO : Anim on artifacts
 // TODO : fix algo
-// TODO : cut sounds
 
 public class GameManager : MonoBehaviour {
 
@@ -26,6 +24,7 @@ public class GameManager : MonoBehaviour {
 	[SerializeField] private GameObject imageWarning;
 
 	[Header("Sound")]
+	[SerializeField] private SoundManager soundManager;
 	[SerializeField] private AudioClip beepSound;
 
 	public enum GameState {MENU, PLAY, PAUSE};
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour {
 	void Start ()
 	{
 		dm = GetComponent<DataManager> ();
-		audioSource = GetComponent<AudioSource> ();
+		audioSource = soundManager.GetAudioSource ();
 		canvasGame.SetActive (false);
 		canvasGameOver.SetActive (false);
 		textBestScore.text = "Best : " + dm.BestScore;
@@ -90,6 +89,7 @@ public class GameManager : MonoBehaviour {
 		score = 0;
 		Instantiate (playerPrefab, playerSpawnPoint.position, Quaternion.identity);
 		ResetGear ();
+		soundManager.PlayGameMusic ();
 	}
 
 	public void Quit()
@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour {
 		_velocity = 0;
 		canvasGame.SetActive (false);
 		canvasGameOver.SetActive (false);
+		soundManager.PlayMenuMusic ();
 	}
 
 	public void ResetGear()
@@ -121,6 +122,7 @@ public class GameManager : MonoBehaviour {
 		StopCoroutine ("EventCoroutine");
 		dm.SaveData ((int)score);
 		textBestScore.text = "Best : " + dm.BestScore;
+		soundManager.PlayEndMusic ();
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
